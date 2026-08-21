@@ -15,7 +15,7 @@ Detect basic traffic violations	                     : Rule-based logic on top o
 
                                   My Approach and reasoning
 
-### Part 1a — Vehicle Classification (CNN from scratch)
+### Part 1a:  Vehicle Classification (CNN from scratch)
 
 I trained a CNN from scratch (no pretrained weights) on the compulsory dataset provided in track pdf. 
 
@@ -26,11 +26,11 @@ I trained a CNN from scratch (no pretrained weights) on the compulsory dataset p
 - Test accuracy: 60.34%. This is a genuinely harder task than a typical single-label image classifier, since the model has to independently judge the presence of 4 vehicle types per image.
   
 
-### Part 1b — Vehicle Counting (pretrained YOLOv8)
+### Part 1b: Vehicle Counting (pretrained YOLOv8)
 
 Counting requires knowing *where* each vehicle is in an image (bounding boxes), but the compulsory Part 1 dataset only provides whole-image labels ("this image contains a car and a bus"), with no location information. Rather than force that dataset to do a job it isn't built for, we used a **pretrained YOLOv8 model** (explicitly permitted for this track) to detect and count vehicles directly, no additional training needed, since YOLO already recognizes car/bus/truck/motorcycle/bicycle from its COCO training.
 
-### Part 2a — Emergency Vehicle Detection (CNN from scratch)
+### Part 2a: Emergency Vehicle Detection (CNN from scratch)
 
 I sourced a dedicated **"Emergency vs Non-Emergency Vehicle"** dataset (from Kaggle) and trained a second CNN from scratch to classify a vehicle image as emergency or not.
 
