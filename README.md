@@ -18,9 +18,9 @@ Detect basic traffic violations	                     : Rule-based logic on top o
 ai-traffic-police/
 ├── README.md
 └── notebooks/
-    ├── part1_classification_counting.py   ; Part 1: classify + count vehicles
-    ├── part2_emergency_and_violations.py  ; Part 2: emergency detection + violation logic
-    └── part3_full_pipeline_test.py        ; End-to-end demo on real street images
+    ├── part1_classification_counting.py   # Part 1: classify + count vehicles
+    ├── part2_emergency_and_violations.py  # Part 2: emergency detection + violation logic
+    └── part3_full_pipeline_test.py        # End-to-end demo on real street images
 
 
                                   Approach and reasoning
