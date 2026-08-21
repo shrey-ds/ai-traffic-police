@@ -53,11 +53,27 @@ I deliberately avoided implementing a "red-light" violation, since that would re
 
 ## Results
 
-- `training_curves.png` / `emergency_classifier_training_curves.png` — accuracy/loss over training epochs for both CNNs
-- `sample_predictions.png` / `emergency_sample_predictions.png` — real test images with true vs. predicted labels
-- `vehicle_counting_proof.png` — YOLO detection + counting on test images
-- `violation_detection_proof.png` — restricted-zone and triple-riding detection on test images
-- `full_pipeline_test_street.png` — all three systems (counting, emergency detection, violations) run together on real street-level traffic photos
+                        Part 1a — Vehicle Classification
+
+![Training curves](outputs/training_curves.png)
+![Sample predictions](outputs/sample_predictions.png)
+
+                        Part 1b — Vehicle Counting
+
+![Vehicle counting proof](outputs/vehicle_counting_proof.png)
+
+                        Part 2a — Emergency Vehicle Detection
+
+![Emergency classifier training curves](outputs/emergency_classifier_training_curves.png)
+![Emergency sample predictions](outputs/emergency_sample_predictions.png)
+
+                       Part 2b — Traffic Violation Detection
+
+![Violation detection proof](outputs/violation_detection_proof.png)
+
+                       Full Pipeline — All systems working together on real street images
+
+![Full pipeline test](outputs/full_pipeline_test_street.png)
 
 ## Setup
 
