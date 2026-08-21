@@ -68,3 +68,40 @@ plt.tight_layout()
 plt.savefig('full_pipeline_test_street.png', dpi=150)
 plt.show()
 print("\nSaved as full_pipeline_test_street.png")
+
+
+
+#-----------LIVE DEMO------------
+!pip install gradio -q
+
+import gradio as gr
+
+def gradio_pipeline(uploaded_image):
+    # Gradio gives us the image as a numpy array (RGB) — save it so our
+    # existing pipeline (which takes a file path) can use it unchanged.
+    temp_path = '/kaggle/working/gradio_input.jpg'
+    cv2.imwrite(temp_path, cv2.cvtColor(uploaded_image, cv2.COLOR_RGB2BGR))
+
+    annotated_img, summary = full_pipeline_test(temp_path)
+    annotated_img_rgb = cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB)
+
+    summary_text = (
+        f"Vehicle counts: {summary['vehicle_counts']}\n"
+        f"Emergency vehicle: {summary['is_emergency_vehicle']} "
+        f"(confidence: {summary['emergency_confidence']})\n"
+        f"Violations: {summary['violations']}"
+    )
+    return annotated_img_rgb, summary_text
+
+demo = gr.Interface(
+    fn=gradio_pipeline,
+    inputs=gr.Image(label="Upload a traffic image"),
+    outputs=[
+        gr.Image(label="Annotated Output"),
+        gr.Textbox(label="Detection Summary", lines=6)
+    ],
+    title="AI Traffic Police - Live Demo",
+    description="Upload a street/traffic image to run vehicle counting, emergency vehicle detection, and violation detection."
+)
+
+demo.launch(share=True)   # share=True gives a public link you can even open on your phone
