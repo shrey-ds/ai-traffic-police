@@ -3,12 +3,15 @@
 A computer vision system that helps traffic authorities monitor roads, detect incidents, and improve traffic management — built for Parts 1 (Foundations) and 2 (Detection) of the Computer Vision track.
 
 ## What this project does
-                   Capability                              Approach
+                   Capability                            Approach
 Classify vehicle types (car, bus, motorcycle, truck) :	CNN trained from scratch
+
 Count vehicles in an image	                         :  YOLOv8
+
 Detect emergency vehicles	                           :  CNN trained from scratch
+
 Detect basic traffic violations	                     : Rule-based logic on top of YOLOv8 detections
-## Repository structure
+
 
 
                                  My Repository Structure:
