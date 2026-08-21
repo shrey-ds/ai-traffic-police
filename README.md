@@ -81,9 +81,9 @@ I used YOLOv8 in its pretrained form (no additional training) for vehicle counti
 
 ## Honest limitations in what i designed
 
-- Vehicle classifier accuracy (~60%) and emergency classifier accuracy (~70%) are modest, since both were trained from scratch in limited time on comparatively small/medium datasets. Accuracy was explicitly not the primary grading criterion for this track.
-- YOLOv8-nano (the fastest, smallest YOLO variant) struggles with small or distant vehicles in aerial/top-down camera angles — we found street-level camera angles work significantly better, and adjusted our test images accordingly.
-- The restricted-zone violation uses a placeholder zone position rather than a calibrated real camera zone, since our test images aren't from a single fixed camera feed.
+- Vehicle classifier accuracy (~60%) and emergency classifier accuracy (~70%) are modest, since both were trained from scratch in limited time on comparatively small/medium datasets. .
+- YOLOv8-nano (the fastest, smallest YOLO variant) struggles with small or distant vehicles in aerial/top-down camera angles — I found street-level camera angles work significantly better, and adjusted my test images accordingly.
+- The restricted-zone violation uses a placeholder zone position rather than a calibrated real camera zone, since my test images aren't from a single fixed camera feed.
 - The emergency vehicle classifier runs on whole images rather than per-vehicle crops, which limits its reliability in busy multi-vehicle scenes (see Part 2a section above for detail).
 
 ## Tools I used
