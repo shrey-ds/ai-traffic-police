@@ -81,15 +81,28 @@ I deliberately avoided implementing a "red-light" violation, since that would re
 pip install -r requirements.txt
 ```
 
+Note on running this project: the scripts were developed and run inside a Kaggle notebook, since they rely on GPU acceleration and Kaggle-attached datasets (paths like /kaggle/input/datasets/... are hardcoded to match our notebook's attached inputs). To actually run this end-to-end, you would need to:
+
+1. Create a Kaggle notebook with GPU enabled (T4 x2 recommended)
+2. Attach the datasets listed below via Kaggle's "Add Input" panel
+3. Copy each script's contents into notebook cells, in order: part1_classification_counting.py → part2_emergency_and_violations.py → part3_full_pipeline_test.py
+4. Update the dataset paths in each script if your Kaggle username/dataset names differ from mine. 
+
+All result outputs (training curves, sample predictions, detection proof images) are already included in the outputs/ folder and embedded below, so the project's results can be reviewed directly without re-running anything.
+
 Run the scripts in order inside a Kaggle notebook (or any environment with GPU access and the datasets attached):
 1. `part1_classification_counting.py`
 2. `part2_emergency_and_violations.py`
 3. `part3_full_pipeline_test.py`
 
+**Live interactive demo (Gradio): for the demo video, I also built a simple Gradio web interface on top of the same pipeline (full_pipeline_test function) that lets you upload any traffic image and see vehicle counts, emergency detection, and violation flags returned live. This was run temporarily inside the Kaggle notebook using demo.launch(share=True), which generates a public link valid for 72 hours, it is not a permanently hosted app, but the live demonstration is shown in my submission video. One would have to Run Part 1 -> Part -> Part 3 in order.**
+
 ### Datasets I used
 - **Part 1 (compulsory):** provided vehicle multiclass datasets (Vehicles-coco.v2i.multiclass, Vehicles.v1i.multiclass)
 - **Part 2a:** [Emergency vs Non-Emergency Vehicle Classification](https://www.kaggle.com/datasets/abhisheksinghblr/emergency-vehicles-identification) (Kaggle)
 - **Part 2b test images:** a small set of street-level traffic photos (Pexels, free to use): not used for training, only to demonstrate the violation-detection pipeline
+- **Part 3 Final pipeline test:** used 5 street level images and inserted them on Kaggle: Part 2b test images: a small set of street-level traffic photos (Pexels, free to use) — not used for training, only to demonstrate the violation-detection pipeline. 
+
 
 ### A note on "using YOLO"
 
