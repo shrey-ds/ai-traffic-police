@@ -42,7 +42,7 @@ I sourced a dedicated **"Emergency vs Non-Emergency Vehicle"** dataset (from Kag
 
 However, a known limitation: this classifier looks at the *whole image*, not individual detected vehicles. It performs well when the emergency vehicle is the clear subject of the photo, but confidence drops when it's smaller or partially visible within a busier street scene (see `part3_full_pipeline_test.py` results — a fire truck in a busy scene was correctly detected by YOLO but scored close to the 50% decision boundary by the emergency classifier).
 
-### Part 2b — Traffic Violation Detection (rule-based, on YOLO detections)
+### Part 2b: Traffic Violation Detection (rule-based, on YOLO detections)
 
 I implemented two violation types on top of YOLO's detections:
 
