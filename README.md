@@ -95,7 +95,7 @@ Run the scripts in order inside a Kaggle notebook (or any environment with GPU a
 2. `part2_emergency_and_violations.py`
 3. `part3_full_pipeline_test.py`
 
-**Live interactive demo (Gradio): for the demo video, I also built a simple Gradio web interface on top of the same pipeline (full_pipeline_test function) that lets you upload any traffic image and see vehicle counts, emergency detection, and violation flags returned live. This was run temporarily inside the Kaggle notebook using demo.launch(share=True), which generates a public link valid for 72 hours, it is not a permanently hosted app, but the live demonstration is shown in my submission video. One would have to Run Part 1 -> Part -> Part 3 in order.**
+**Live interactive demo (Gradio): for the demo video, I also built a simple Gradio web interface on top of the same pipeline (full_pipeline_test function) that lets you upload any traffic image and see vehicle counts, emergency detection, and violation flags returned live. This was run temporarily inside the Kaggle notebook using demo.launch(share=True), which generates a public link valid for 72 hours, it is not a permanently hosted app, but the live demonstration is shown in my submission video. One would have to Run Part 1 -> Part 2 -> Part 3 in order.**
 
 ### Datasets I used
 - **Part 1 (compulsory):** provided vehicle multiclass datasets (Vehicles-coco.v2i.multiclass, Vehicles.v1i.multiclass)
