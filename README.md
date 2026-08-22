@@ -101,7 +101,7 @@ Run the scripts in order inside a Kaggle notebook (or any environment with GPU a
 - **Part 1 (compulsory):** provided vehicle multiclass datasets (Vehicles-coco.v2i.multiclass, Vehicles.v1i.multiclass)
 - **Part 2a:** [Emergency vs Non-Emergency Vehicle Classification](https://www.kaggle.com/datasets/abhisheksinghblr/emergency-vehicles-identification) (Kaggle)
 - **Part 2b test images:** a small set of street-level traffic photos (Pexels, free to use): not used for training, only to demonstrate the violation-detection pipeline
-- **Part 3 Final pipeline test:** used 5 street level images and inserted them on Kaggle: Part 2b test images: a small set of street-level traffic photos (Pexels, free to use) — not used for training, only to demonstrate the violation-detection pipeline. 
+- **Part 3 Final pipeline test:** used 5 street level images and inserted them on Kaggle. (One can easily remove the code snippet that includes path of these image and only keep full pipeline testing snippet while running on their notebook as testing on these 5 images was an optional part. The real test is in demo but for that you would have run all the parts as said earlier.)
 
 
 ### A note on "using YOLO"
